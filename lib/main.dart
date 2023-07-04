@@ -15,18 +15,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter BLOC + SQL',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-            primary: Colors.black54,
-            secondary: Colors.purple,
-          ),
-          textTheme:
-              const TextTheme(bodyMedium: TextStyle(color: Colors.purple)),
+      title: 'Flutter BLOC + SQL',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Colors.black54,
+          secondary: Colors.purple,
         ),
-        home: BlocProvider<NotesBloc>(
-          create: (context) => NotesBloc()..add(NotesAppStarted()),
-          child: const StartScreen(),
-        ));
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.purple)),
+      ),
+      home: BlocProvider<NotesBloc>(
+        create: (context) => NotesBloc()..add(NotesAppStarted()),
+        child: const StartScreen(),
+      ),
+    );
   }
 }

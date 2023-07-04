@@ -43,9 +43,10 @@ class DBProvider {
 
   Future<List<NotePages>> getNotes() async {
     Database? db = await database;
-    final List<Map<String, dynamic>> notesMapList = await db!.query(notesTable);
+    final List<Map<String, Object?>>? notesMapList =
+        await db?.query(notesTable);
     final List<NotePages> notesList = [];
-    for (var noteMap in notesMapList) {
+    for (var noteMap in notesMapList!) {
       notesList.add(NotePages.fromMap(noteMap));
     }
     return notesList;
@@ -53,13 +54,13 @@ class DBProvider {
 
   Future<NotePages> insertNote(NotePages note) async {
     Database? db = await database;
-    await db!.insert(notesTable, note.toMap());
+    await db?.insert(notesTable, note.toMap());
     return note;
   }
 
-  Future<int> updateNote(NotePages note) async {
+  Future<int?> updateNote(NotePages note) async {
     Database? db = await database;
-    return await db!.update(
+    return await db?.update(
       notesTable,
       note.toMap(),
       where: '$columnId = ?',
@@ -67,9 +68,9 @@ class DBProvider {
     );
   }
 
-  Future<int> deleteNote(int id) async {
+  Future<int?> deleteNote(int id) async {
     Database? db = await database;
-    return await db!.delete(
+    return await db?.delete(
       notesTable,
       where: '$columnId = ?',
       whereArgs: [id],
