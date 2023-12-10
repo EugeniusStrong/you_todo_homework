@@ -23,7 +23,7 @@ class DBProvider {
 
   Future<Database?> _initDB() async {
     Directory dir = await getApplicationDocumentsDirectory();
-    String path = '${dir.path}/NewNotePages.db';
+    String path = '${dir.path}/TodoTable.db';
     return await openDatabase(
       path,
       version: 1,

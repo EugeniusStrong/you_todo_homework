@@ -1,16 +1,10 @@
 # you_todo_homework
 
-A new Flutter project.
+# Описание проекта
 
-## Getting Started
+**Проект самой простой записной книжки, который создавался с целью закрепления знаний пакета BloC и пакета SQL, фрэймворк Flutter.**
 
-This project is a starting point for a Flutter application.
+|            Главное меню            |           Создание записи            |             Ввод текста              |             Созданные записи              |             Несколько записей             |             Обновление записи             |
+|:----------------------------------:|:------------------------------------:|:------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
+| ![](./preview_images/add_note.png) | ![](./preview_images/input_text.png) | ![](./preview_images/list_notes.png) | ![](./preview_images/note_in_progres.png) | ![](./preview_images/note_in_progres.png) | ![](./preview_images/note_in_progres.png) |
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
